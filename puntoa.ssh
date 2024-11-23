@@ -1,0 +1,62 @@
+   apt list --installed
+   apt list --installed |grep lvm
+   sudo apt update
+   sudo fdisk /dev/sdc
+   lsblk
+   sudo fdisk /dev/sdc
+   lsblk
+   sudo mkswap /dev/sdc1
+   sudo swapon /dev/sdc1
+   free -h
+   cat /proc/swaps
+   ll /proc/
+   free -h
+   cat /proc/sys/vm/swappiness
+   
+   swapon -s
+   cat /etc/fstab
+   df -h
+   sudo fdisk /dev/sdc
+   lsblk
+   sudo wipefs -a /dev/sdc2
+   sudo wipefs -a /dev/sdc3
+   sudo wipefs -a /dev/sdc5
+   sudo wipefs -a /dev/sdc6
+   sudo pvcreate /dev/sdc2 /dev/sdc3 /dev/sdc5 /dev/sdc6
+   sudo pvs
+   sudo vgcreate vfAdmin /dev/sdc2 /dev/sdc3
+   sudo vgs
+   sudo vgcreate vgDevelopers /dev/sdc5 /dev/sdc6
+   sudo vgs
+   sudo lvcreate -L 1G vgDevelopers -n lvDevelopers
+   sudo lvcreate -L 1G vgDevelopers -n lvTesters
+   sudo lvcreate -L .9G vgDevelopers -n lvDevops
+   sudo lvcreate -L .7G
+   sudo lvcreate -L .4G vgDevelopers -n lvDevops
+   sudo lvcreate -L 2G vfAdmin -n lvAdmin
+   sudo lvcreate -L 1.9G vfAdmin -n lvAdmin
+   sudo lvs
+   sudo pvs
+   
+   sudo fdisk -l
+   cat /dev/mapper/vfDevelopers-lvdevelopers
+   cat /dev/mapper/vfDevelopers-lvdevelopers:
+   cat /dev/mapper/vgDevelopers-lvdevelopers:
+   /dev/mapper/vgDevelopers-lvdevelopers:
+   lsblk
+   sudo mkfs.ext4 /dev/mapper/vgDevelopers-lvDevelopers
+   sudo mkfs.ext4 /dev/mapper/vgDevelopers-lvTesters
+   sudo mkfs.ext4 /dev/mapper/vgDevelopers-lvDevops
+   sudo mkfs.ext4 /dev/mapper/vgDevelopers-lvDevelopers
+   sudo mkfs.ext4 /dev/mapper/vgDevelopers-lvTesters
+   sudo mkfs.ext4 /dev/mapper/vgDevelopers-lvDevops
+   sudo lsblk -f
+   sudo mkdir /mnt/lvDevelopers
+   sudo mkdir /mnt/lvTesters
+   sudo mkdir /mnt/lvTDevops
+   sudo mkdir /mnt/lvAdmin
+   sudo mount /dev/mapper/vgDevelopers-lvDevelopers /mnt/lvDevelopers
+   sudo mount /dev/mapper/vgDevelopers-lvTesters /mnt/lvTesters
+   sudo mount /dev/mapper/vgDevelopers-lvDevops /mnt/lvDevops
+   sudo mount /dev/mapper/vfAdmin-lvAdmin /mnt/lvAdmin
+   df -h

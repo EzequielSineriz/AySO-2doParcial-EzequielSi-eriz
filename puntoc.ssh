@@ -1,0 +1,18 @@
+
+mkdir ~/docker2Parcial
+cd /docker2Parciar
+mkdir appHomeBanking
+docker login -u ezequielsineriz
+sudo vim dockerfile
+cd dockerfile
+sudo docker build -t 2parcial-ayso:v1.0 .
+docker login -u ezequielsineriz
+sudo docker tag 2parcial-ayso:v1.0 ezequielsineriz/2parcial-ayso:v1.0
+sudo docker push ezequielsineriz/2parcial-ayso:v1.0
+docker image list
+sudo docker image list
+docker push ezequielsineriz/2parcial-ayso:v1.0
+docker run -d -p 8080:80 ezequielsineriz/2parcial-ayso:v1.0
+sudo docker run -d -p 8080:80 ezequielsineriz/2parcial-ayso:v1.0
+docker container ls
+sudo docker container ls

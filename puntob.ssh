@@ -1,0 +1,41 @@
+
+Ansible
+   ip adress show
+   ip address show
+   halt
+  vagrant halt
+  sudo halt
+  ip address show
+   ll
+   vim .ssh/authorized_keys
+   cat .ssh/authorized_keys
+  sudo apt list --installed |grep apache
+ apache2 --version
+   sudo apache2 --version
+  apache2
+  sudo apache2
+    ll /var/www/html/
+
+
+
+Nodo
+
+  address show
+  ssh-keygen
+  ll .ssh/
+  cat .ssh/id_rsa.pub
+  ssh vagrant@192.168.56.9
+  sudo apt updete
+  sudo apt update
+  sudo apt install ansible
+  git clone https://github.com/upszot/UTN-FRA_SO_Ansible.git
+  ll
+  UTN-FRA_SO_Ansible/
+  ll
+  cd UTN-FRA_SO_Ansible/
+  ll
+  cd ejemplo_02
+  ll
+  vim inventory
+  vim playbook.yml
+ ansible-playbook -i inventory plabook,yml
